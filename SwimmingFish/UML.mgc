@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="com.swimmingFish.Role.Enemy" x="617" y="309">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.swimmingFish.Role.BaseEntity"/>
+    </Class>
+    <Class name="com.swimmingFish.Role.Player" x="624" y="1142">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.swimmingFish.sql.Score.DbHelper" x="779" y="93">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.swimmingFish.Role.DynamicProps" x="571" y="859">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.swimmingFish.Loading.IAsyncCallback" x="658" y="1660">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.swimmingFish.sql.Score" x="460" y="49">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.swimmingFish.sql.Score.DbHelper"
+            endpointName="dbHelper" kind="Simple"/>
+        <Communication destinationClassName="com.swimmingFish.sql.Score.DbHelper"/>
+    </Class>
+    <Class name="com.view.swimmingFish.GameActivity" x="10" y="26">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.swimmingFish.Role.BaseEnemy"
+            endpointName="enemySpriteList" kind="Simple">
+            <Point x="592" y="793"/>
+        </Association>
+        <Association destinationClassName="com.swimmingFish.Role.Player"
+            endpointName="fish" kind="Simple"/>
+        <Association
+            destinationClassName="com.swimmingFish.Role.DynamicProps"
+            endpointName="currentPropSprite" kind="Simple"/>
+        <Association destinationClassName="com.swimmingFish.sql.Score"
+            endpointName="score" kind="Simple"/>
+        <Association
+            destinationClassName="com.swimmingFish.Role.BaseEnemy"
+            endpointName="attackEnemy" kind="Simple">
+            <Point x="514" y="702"/>
+        </Association>
+        <Association destinationClassName="com.swimmingFish.Role.Enemy"
+            endpointName="enemyList" kind="Simple"/>
+        <Communication destinationClassName="com.swimmingFish.Role.Player"/>
+        <Communication destinationClassName="com.swimmingFish.Role.DynamicProps"/>
+        <Communication destinationClassName="com.swimmingFish.sql.Score"/>
+        <Communication destinationClassName="com.swimmingFish.Role.BaseEnemy"/>
+    </Class>
+    <Class name="com.swimmingFish.Role.BaseEnemy" x="606" y="617">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.swimmingFish.Role.BaseEntity" x="849" y="280">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.swimmingFish.Loading.AsyncTaskLoader" x="576" y="1781">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.swimmingFish.Loading.IAsyncCallback"
+            endpointName="_params" kind="Simple"/>
+        <Communication destinationClassName="com.swimmingFish.Loading.IAsyncCallback"/>
+    </Class>
+</ClassDiagram>
